@@ -1,0 +1,33 @@
+C/C++
+    Embedded programming (Arduino, Raspberry PI)
+    Native application development
+Java
+    Eclipse IDE
+    Android Studio
+Python
+  Video game development using pygame library.
+  Many
+Web development (including web-apps)
+    Front end
+        HTML, CSS, Javacript
+        AngularJS
+        jQuery
+        Bootstrap
+    Back End
+        Asp.NET
+        NodeJS
+Hardware
+    Understanding of electronics and circuits.
+    Experience with tools such as multimeters and oscilloscopes.
+Other useful skills
+    GIT
+    Bash and Linux commands
+
+Management and leadership
+The McMaster's engineering management program teaches its students how to manage a business.
+Some of the key areas of the management education includes
+    Commerce
+    Finances
+    Human resources management
+    Smart decision making (evidence based management)
+        Basing decisions on facts such as revenues and costs.

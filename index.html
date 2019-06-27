@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" -->
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/skills.css">
+
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/index-script.js"></script>
+
+  <title>Sachin's website</title>
+
+  <style>
+  .sb {
+    overflow: hidden;
+    background-color: #29648A;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    color: #e1ffff;
+    padding-bottom: 5px;
+  }
+
+  .nav-color {
+    color: white;
+    background-color: transparent;
+    transition: 1s all;
+  }
+
+  .nav-pic {
+    width: 18px;
+    margin-right: 5px;
+  }
+
+  .main-pic {
+    display: block;
+    width: 100px;
+    margin: auto;
+    width: 45%
+  }
+
+  .nav-color:hover {
+    color: white;
+    background-color: #204F6D;
+  }
+
+  .content {
+    margin-left: 300px;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    overflow: auto;
+    background-color: #050824;
+    background-image: radial-gradient(#42457c, #25274D);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23515d69' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%236b6b6b' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23495760' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%236d686a' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23425157' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%236f6669' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%233c4a4e' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23716367' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23374445' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23736166' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23333d3d' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23755e65' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  #btn-about-me {
+    margin-top: 8px;
+  }
+
+  p {
+    display: block;
+    width: 45rem;
+    margin: 0 auto 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  #loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,1);
+  }
+</style>
+</head>
+
+<body>
+  <nav id="navbar-example2" class="nav flex-column sb">
+    <a class="nav-item nav-link nav-color active" href="index.html"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/home-page.png">Home</a>
+    <a class="nav-item nav-link nav-color" href="skills.html"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/world-cup.png">Skills & Experience</a>
+    <a class="nav-item nav-link nav-color" href="#"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/hammer.png">Projects</a>
+    <a class="nav-item nav-link nav-color" href="#"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/hammer.png">Contact Me</a>
+  </nav>
+
+  <div class="content" style="scroll-behavior: smooth; overflow: hidden">
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col my-auto">
+          <!-- <image class="main-pic" src="main-picture-2.jpg"></images> -->
+          <h1 class="display-4">Hello, I am Sachin!</h1>
+          <h4 class="font-weight-light">Software Engineering and Management<br>McMaster University</h4>
+          <button class="btn btn-dark btn-lg" type="button" id="btn-about-me">About Me</button>
+        </div>
+      </div>
+
+      <div class="row h-100" style="display: none" id="about">
+        <div class="col my-auto">
+          <div class="row"><div class="col"><h1 class="display-4">About Me</h1></div></div>
+          <div class="col">
+            <p>
+              I am a software engineering and mangement student with a variety of
+              skills and experience that will bring value to your business.
+              Currently, I am enrolled in the 4th year of McMaster's prestigious
+              software engineering and management program.
+            </p>
+            <p>
+              My skill set spans all the way from software and hardware development
+              to commerce and finances. I am capable of building complex web-apps,
+              developing native applications, creating electronic circuits and
+              integrating them with Arduino and Raspberry PI.
+            </p>
+            <p>
+              I have taken many commerce, finances, accounting mangement courses as a part
+              of my management program which taught me about managing an organization.
+            </P>
+            <p>
+              Make sure to take a look at the skills section to get a full picture
+              of my abilities.
+            </p>
+            <button class="btn btn-dark btn-lg" type="button" id="btn-skills">My Skills</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row h-100" style="display: none" id="skills">
+        <div class="col">
+
+        <div class="row"><div class="col"><h1 class="display-4">Skills</h1></div></div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-6 col-sm-12">
+            <h3 class="skill-heading">Programming languages</h3>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">C/C++</h3>
+              <li class="font-weight-light">Embedded programming (Arduino, Raspberry PI).</li>
+              <li class="font-weight-light">Native application development.</li>
+            </ul>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Java</h3>
+              <li class="font-weight-light">Adept at using <code class="java">Eclipse IDE</code>,
+                <code class="java">Netbeans IDE</code> or the <code class="java">Java
+                  compiler</code> to create Java applications.</li>
+              <li class="font-weight-light">Create android apps using
+                <code class="java">Android Studio</code>.</li>
+            </ul>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Python</h3>
+              <li class="font-weight-light">Video game development using pygame library.</li>
+              <li class="font-weight-light">Many other smaller applications.</li>
+            </ul>
+          </div>
+
+          <div class="col-xl-4 col-lg-6 col-sm-12">
+            <h3 class="skill-heading">Web development</h3>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Front end</h3>
+                <li class="font-weight-light">HTML, CSS, Javascript.</li>
+                <li class="font-weight-light">Use <code class="web">AngularJS</code>,
+                  <code class="web">JQuery</code>, <code class="web">Bootstrap</code>
+                  to create elegant, efficient and user-friendly front ends for
+                  web-apps/websites.</li>
+            </ul>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Back end</h3>
+              <li class="font-weight-light">Use <code class="web">Asp.NET</code>
+                and/or <code class="web">NodeJS</code> to create back-end servers
+                that seamlessly integrate business logic and technolgy together
+                for highly demanding environments.</li>
+            </ul>
+          </div>
+
+          <div class="col-xl-4 col-lg-6 col-sm-12">
+            <h3 class="skill-heading">Other related skills</h3>
+            <ul class="skill-box text-left fade-in">
+              <li class="font-weight-light">Ability to use <code class="other">GIT</code> for creating and mainting repos for
+                organizational purposes.</li>
+              <li class="font-weight-light">Ability to utialize <code class="other">Linux</code> based environments. I have
+                experience with using the <code class="other">command line</code>,
+                <code class="other">bash</code> and <code class="other">makefiles</code>
+                for software projects.</li>
+            </ul>
+
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Hardware</h3>
+              <li class="font-weight-light">Integrate <code class="hardware">Raspberry PI</code> and/or
+                <code class="hardware">Arduino</code> in to embedded applications
+                such as <code class="hardware">IoT</code> devices.</li>
+              <li class="font-weight-light">Ability to diagnose problems using tools such as
+                <code class="hardware">multimeters</code> and
+                <code class="hardware">oscilloscopes</code>.</li>
+              <li class="font-weight-light">Experience with building various electronic circuits for projects.</li>
+              <li class="font-weight-light">Ability to read electronic schematics.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="loader-container"></div>
+</body>
+
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+  <script src="scripts/jquery-3.3.1.slim.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/script.js"></script>
+
+  <title>Sachin's website</title>
+
+  <style>
+  .sb {
+    overflow: auto;
+    /* background-color: #9d8eff; */
+    background-color: #29648A;
+    position: fixed;
+    top: 0px;
+    width: 300px;
+    height: 100%;
+    color: #e1ffff;
+    padding-bottom: 5px;
+  }
+
+  .content {
+    margin-left: 300px;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    background-color: #25274D;
+    background-image: radial-gradient(#42457c, #25274D);
+  }
+
+  .nav-color {
+    color: white;
+    background-color: transparent;
+    transition: 1s all;
+  }
+
+  .nav-pic {
+    width: 18px;
+    /* vertical-align: middle; */
+    margin-right: 5px;
+  }
+
+  .main-pic {
+    display: block;
+    margin: auto;
+    width: 45%
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+
+  .nav-color:hover {
+    color: white;
+    /* background-color: #8370ff; */
+    background-color: #204F6D;
+  }
+
+  .skill-box {
+    margin: 10px;
+    display: inline-block;
+    min-width: 500px;
+    border-style: solid;
+    border-radius: 10%;
+    border-color: #3AAFA9;
+    text-align: left;
+  }
+
+  /* ul, h6 {
+    background: #86C232;
+  } */
+
+  td {
+    background-color: #86C232;
+  }
+
+  li {
+
+  }
+
+  ul {
+    /* background-image: radial-gradient(#FFFFFF, #67809F); */
+    background-color: #565887;
+    border-radius: 10px;
+  }
+
+  .skills-wrap li {
+    color: #C5EFF7;
+  }
+
+  .skills-wrap ul {
+    /* transition: opacity 1s; */
+    /* opacity: 0; */
+    opacity: 0;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+	  transition: all 2s ease;
+  }
+
+  .clicked {
+    opacity: 1;
+  }
+</style>
+</head>
+
+<body>
+  <nav class="nav flex-column sb">
+    <a class="nav-link nav-color active" href="#"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/home-page.png">Home</a>
+    <a class="nav-item nav-link nav-color" href="skills.html"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/world-cup.png">Skills & Experience</a>
+    <a class="nav-item nav-link nav-color" href="#"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/hammer.png">Projects</a>
+    <a class="nav-item nav-link nav-color" href="#"><img class="nav-pic" src="https://img.icons8.com/ios/50/000000/hammer.png">Contact Me</a>
+  </nav>
+
+  <div class="content">
+    <!-- <image class="main-pic" src="https://www.incimages.com/uploaded_files/image/970x450/getty_946971482_2000135218188439628_377598.jpg"></images> -->
+
+    <h1 class="display-4">Skills</h1>
+
+    <div class="d-inline-flex flex-wrap skills-wrap">
+      <div>
+        <h4>Programming languages</h4>
+        <ul class="text-left fade-in">
+          <h5 class="font-weight-bold text-center">C/C++</h5>
+          <li class="font-weight-light">Embedded programming (Arduino, Raspberry PI)</li>
+          <li class="font-weight-light">Native application development</li>
+        </ul>
+        <ul class="text-left fade-in">
+          <h5 class="font-weight-bold text-center">Java</h5>
+          <li>Skilled with using Eclipse IDE, Netbeans IDE or the Java
+            compiler</li>
+          <li>Android Studio</li>
+        </ul>
+        <ul class="text-left fade-in">
+          <h5 class="font-weight-bold text-center">Python</h5>
+          <li>Video game development using pygame library.</li>
+          <li>Many other smaller applications.</li>
+        </ul>
+
+        <ul style="text-align: left">
+          <h5 class="font-weight-bold text-center">Javacript</h5>
+          <li>Web development.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Web development (including web-apps)</h4>
+        <ul class="text-left fade-in">
+          <h5 class="font-weight-bold text-center">Front end</h5>
+          <li>HTML, CSS, Javacript</li>
+          <li>AngularJS</li>
+          <li>jQuery</li>
+          <li>Bootstrap</li>
+        </ul>
+        <ul class="text-left fade-in">
+          <h5 class="font-weight-bold text-center">Back end</h5>
+          <li>Asp.NET</li>
+          <li>NodeJS</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Other related skills</h4>
+        <ul class="text-left fade-in">
+          <li>Ability to use <em>GIT</em> for organization.</li>
+          <li>Proficient in using <em>Linux</em> based environments.</li>
+        </ul>
+
+        <h4>Hardware</h4>
+        <ul class="text-left fade-in">
+          <li>Experience with building various electronic circuits for projects.</li>
+          <li>Ability to read electronic schematics</li>
+          <li>Experience with tools such as multimeters and oscilloscopes.</li>
+        </ul>
+      </div>
+      <button type="button" onclick="fadeIn()">Click me</button>
+      </div>
+    </div>
+<!-- </div> -->
+</body>
+
+
+</html>
