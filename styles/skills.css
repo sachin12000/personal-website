@@ -12,7 +12,8 @@
 }
 
 .skill-box li {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
 }
 
 .skill-box h3 {
@@ -37,5 +38,5 @@
 }
 
 code {
-  font-size: 100%;
+  font-size: 1.25rem;
 }

@@ -56,7 +56,7 @@
 
   .content {
     /* margin-left: 300px; */
-    height: 100vh;
+    height: auto;
     text-align: center;
     color: white;
     overflow: auto;
@@ -93,8 +93,8 @@
 </style>
 </head>
 
-<body style="overflow:hidden;position:relative" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-  <nav id="navbar-example2" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<body style="overflow:hidden;position:relative" data-spy="scroll" data-target="#navbar" data-offset="0">
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" href="#">My logo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -138,7 +138,7 @@
 
   <div class="container-fluid content" id="home">
     <div class="row h-100">
-      <div class="col my-auto">
+      <div class="col my-auto" id="home_col">
         <!-- <image class="main-pic" src="main-picture-2.jpg"></images> -->
         <h1 class="display-4">Hello, I am Sachin!</h1>
         <h4 class="font-weight-light">Software Engineering and Management<br>McMaster University</h4>
@@ -149,7 +149,7 @@
 
   <div class="container-fluid content" style="display: none" id="about">
     <div class="row h-100">
-      <div class="col my-auto">
+      <div class="col my-auto" id="about_col">
         <div class="row"><div class="col"><h1 class="display-4">About Me</h1></div></div>
         <div class="col">
           <p>
@@ -180,10 +180,10 @@
 
   <div class="container-fluid content" style="display: none" id="skills">
     <div class="row h-100">
-      <div id="skills-col" class="col">
+      <div id="skills_col" class="col">
 
-      <div class="row"><div class="col"><h1 class="display-4">Skills</h1></div></div>
-      <div class="row">
+      <div id="test_r1" class="row"><div class="col"><h1 class="display-4">Skills</h1></div></div>
+      <div id="test_r2" class="row">
         <div class="col-xl-4 col-lg-6 col-sm-12">
           <h3 class="skill-heading">Programming languages</h3>
           <ul class="skill-box text-left fade-in">
