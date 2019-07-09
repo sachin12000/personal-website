@@ -55,7 +55,6 @@
   }
 
   .content {
-    /* margin-left: 300px; */
     height: auto;
     text-align: center;
     color: white;
@@ -65,10 +64,11 @@
   body {
     background-color: #050824;
     background-image: radial-gradient(#42457c, #25274D);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23515d69' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%236b6b6b' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23495760' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%236d686a' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23425157' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%236f6669' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%233c4a4e' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23716367' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23374445' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23736166' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23333d3d' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23755e65' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"), url(images/stars.svg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23515d69' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%236b6b6b' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23495760' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%236d686a' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23425157' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%236f6669' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%233c4a4e' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23716367' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23374445' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23736166' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23333d3d' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23755e65' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"), url(images/death-star.svg), url(images/moon.svg), url(images/stars.svg);
     background-attachment: fixed;
-    background-size: cover, auto;
-    background-repeat: no-repeat, repeat;
+    background-size: cover, 400px, 400px, auto;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+    background-position: 0% 0%, 10% 25%, 90% 45%, 0% 0%;
   }
 
   #btn-about-me {
@@ -152,29 +152,27 @@
     <div class="row h-100">
       <div class="col my-auto" id="about_col">
         <div class="row"><div class="col"><h1 class="display-4">About Me</h1></div></div>
-        <div class="col">
-          <p>
-            I am a software engineering and mangement student with a variety of
-            skills and experience that will bring value to your business.
-            Currently, I am enrolled in the 4th year of McMaster's prestigious
-            software engineering and management program.
-          </p>
-          <p>
-            My skill set spans all the way from software and hardware development
-            to commerce and finances. I am capable of building complex web-apps,
-            developing native applications, creating electronic circuits and
-            integrating them with Arduino and Raspberry PI.
-          </p>
-          <p>
-            I have taken many commerce, finances, accounting mangement courses as a part
-            of my management program which taught me about managing an organization.
-          </P>
-          <p>
-            Make sure to take a look at the skills section to get a full picture
-            of my abilities.
-          </p>
-          <button class="btn btn-dark btn-lg" type="button" id="btn-skills">My Skills</button>
-        </div>
+        <p>
+          I am a software engineering and mangement student with a variety of
+          skills and experience that will bring value to your business.
+          Currently, I am enrolled in the 4th year of McMaster's prestigious
+          software engineering and management program.
+        </p>
+        <p>
+          My skill set spans all the way from software and hardware development
+          to commerce and finances. I am capable of building complex web-apps,
+          developing native applications, creating electronic circuits and
+          integrating them with Arduino and Raspberry PI.
+        </p>
+        <p>
+          I have taken many commerce, finances, accounting mangement courses as a part
+          of my management program which taught me about managing an organization.
+        </P>
+        <p>
+          Make sure to take a look at the skills section to get a full picture
+          of my abilities.
+        </p>
+        <button class="btn btn-dark btn-lg" type="button" id="btn-skills">My Skills</button>
       </div>
     </div>
   </div>
