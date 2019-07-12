@@ -21,7 +21,7 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+  <nav id="navbar" class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" href="#">My logo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -46,16 +46,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
-            <img class="nav-pic" src="https://img.icons8.com/ios/50/000000/world-cup.png">
-            Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <img class="nav-pic" src="https://img.icons8.com/ios/50/000000/hammer.png">
-            Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
             <img class="nav-pic" src="https://img.icons8.com/ios/50/000000/hammer.png">
             Contact Me</a>
         </li>
@@ -63,19 +53,21 @@
     </div>
   </nav>
 
-  <div class="container-fluid content" id="home">
-    <div class="row h-100">
-      <div class="col my-auto pt-0 pb-3 bg-grey-transparent" id="home_col">
+  <div id="home" class="container-fluid content">
+    <div class="row spacer-row"></div>
+    <div id="home_row" class="row">
+      <div class="col my-auto bg-grey-transparent">
         <h1 class="display-4">Hello, I am Sachin!</h1>
         <h4 class="font-weight-light">Software Engineering and Management<br>McMaster University</h4>
-        <button class="btn btn-dark btn-lg" type="button" id="btn-about-me">About Me</button>
+        <button class="btn btn-dark btn-lg mb-3" type="button" id="btn-about-me">About Me</button>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid content" style="display: none" id="about">
-    <div class="row h-100">
-      <div class="col my-auto pt-0 pb-3 bg-grey-transparent" id="about_col">
+  <div id="about" class="container-fluid content" style="display: none">
+    <div class="row spacer-row"></div>
+    <div id="about_row" class="row">
+      <div class="col my-auto bg-grey-transparent">
         <div class="row"><div class="col"><h1 class="display-4">About Me</h1></div></div>
         <p>
           I am a software engineering and mangement student with a variety of
@@ -97,83 +89,82 @@
           Make sure to take a look at the skills section to get a full picture
           of my abilities.
         </p>
-        <button class="btn btn-dark btn-lg" type="button" id="btn-skills">My Skills</button>
+        <button class="btn btn-dark btn-lg mb-3" type="button" id="btn-skills">My Skills</button>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid content" style="display: none" id="skills">
-    <div class="row h-100">
-      <div id="skills_col" class="col">
+  <div id="skills" class="container-fluid content" style="display: none">
+    <div class="row spacer-row"></div>
+    <div id="skills_row" class="row">
+      <div class="col">
+        <div class="row"><div class="col"><h1 class="display-4">Skills</h1></div></div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-6 col-sm-12">
+            <h3 class="skill-heading">Programming languages</h3>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">C/C++</h3>
+              <li class="font-weight-light">Embedded programming (Arduino, Raspberry PI).</li>
+              <li class="font-weight-light">Native application development.</li>
+            </ul>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Java</h3>
+              <li class="font-weight-light">Adept at using <code class="java">Eclipse IDE</code>,
+                <code class="java">Netbeans IDE</code> or the <code class="java">Java
+                  compiler</code> to create Java applications.</li>
+              <li class="font-weight-light">Create android apps using
+                <code class="java">Android Studio</code>.</li>
+            </ul>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Python</h3>
+              <li class="font-weight-light">Video game development using pygame library.</li>
+              <li class="font-weight-light">Many other smaller applications.</li>
+            </ul>
+          </div>
 
-      <div id="test_r1" class="row"><div class="col"><h1 class="display-4">Skills</h1></div></div>
-      <div id="test_r2" class="row">
-        <div class="col-xl-4 col-lg-6 col-sm-12">
-          <h3 class="skill-heading">Programming languages</h3>
-          <ul class="skill-box text-left fade-in">
-            <h3 class="text-center">C/C++</h3>
-            <li class="font-weight-light">Embedded programming (Arduino, Raspberry PI).</li>
-            <li class="font-weight-light">Native application development.</li>
-          </ul>
-          <ul class="skill-box text-left fade-in">
-            <h3 class="text-center">Java</h3>
-            <li class="font-weight-light">Adept at using <code class="java">Eclipse IDE</code>,
-              <code class="java">Netbeans IDE</code> or the <code class="java">Java
-                compiler</code> to create Java applications.</li>
-            <li class="font-weight-light">Create android apps using
-              <code class="java">Android Studio</code>.</li>
-          </ul>
-          <ul class="skill-box text-left fade-in">
-            <h3 class="text-center">Python</h3>
-            <li class="font-weight-light">Video game development using pygame library.</li>
-            <li class="font-weight-light">Many other smaller applications.</li>
-          </ul>
+          <div class="col-xl-4 col-lg-6 col-sm-12">
+            <h3 class="skill-heading">Web development</h3>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Front end</h3>
+                <li class="font-weight-light">HTML, CSS, Javascript.</li>
+                <li class="font-weight-light">Use <code class="web">AngularJS</code>,
+                  <code class="web">JQuery</code>, <code class="web">Bootstrap</code>
+                  to create elegant, efficient and user-friendly front ends for
+                  web-apps/websites.</li>
+            </ul>
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Back end</h3>
+              <li class="font-weight-light">Use <code class="web">Asp.NET</code>
+                and/or <code class="web">NodeJS</code> to create back-end servers
+                that seamlessly integrate business logic and technolgy together
+                for highly demanding environments.</li>
+            </ul>
+          </div>
+
+          <div class="col-xl-4 col-lg-6 col-sm-12">
+            <h3 class="skill-heading">Other related skills</h3>
+            <ul class="skill-box text-left fade-in">
+              <li class="font-weight-light">Ability to use <code class="other">GIT</code> for creating and mainting repos for
+                organizational purposes.</li>
+              <li class="font-weight-light">Ability to utialize <code class="other">Linux</code> based environments. I have
+                experience with using the <code class="other">command line</code>,
+                <code class="other">bash</code> and <code class="other">makefiles</code>
+                for software projects.</li>
+            </ul>
+
+            <ul class="skill-box text-left fade-in">
+              <h3 class="text-center">Hardware</h3>
+              <li class="font-weight-light">Integrate <code class="hardware">Raspberry PI</code> and/or
+                <code class="hardware">Arduino</code> in to embedded applications
+                such as <code class="hardware">IoT</code> devices.</li>
+              <li class="font-weight-light">Ability to diagnose problems using tools such as
+                <code class="hardware">multimeters</code> and
+                <code class="hardware">oscilloscopes</code>.</li>
+              <li class="font-weight-light">Experience with building various electronic circuits for projects.</li>
+              <li class="font-weight-light">Ability to read electronic schematics.</li>
+            </ul>
+          </div>
         </div>
-
-        <div class="col-xl-4 col-lg-6 col-sm-12">
-          <h3 class="skill-heading">Web development</h3>
-          <ul class="skill-box text-left fade-in">
-            <h3 class="text-center">Front end</h3>
-              <li class="font-weight-light">HTML, CSS, Javascript.</li>
-              <li class="font-weight-light">Use <code class="web">AngularJS</code>,
-                <code class="web">JQuery</code>, <code class="web">Bootstrap</code>
-                to create elegant, efficient and user-friendly front ends for
-                web-apps/websites.</li>
-          </ul>
-          <ul class="skill-box text-left fade-in">
-            <h3 class="text-center">Back end</h3>
-            <li class="font-weight-light">Use <code class="web">Asp.NET</code>
-              and/or <code class="web">NodeJS</code> to create back-end servers
-              that seamlessly integrate business logic and technolgy together
-              for highly demanding environments.</li>
-          </ul>
-        </div>
-
-        <div class="col-xl-4 col-lg-6 col-sm-12">
-          <h3 class="skill-heading">Other related skills</h3>
-          <ul class="skill-box text-left fade-in">
-            <li class="font-weight-light">Ability to use <code class="other">GIT</code> for creating and mainting repos for
-              organizational purposes.</li>
-            <li class="font-weight-light">Ability to utialize <code class="other">Linux</code> based environments. I have
-              experience with using the <code class="other">command line</code>,
-              <code class="other">bash</code> and <code class="other">makefiles</code>
-              for software projects.</li>
-          </ul>
-
-          <ul class="skill-box text-left fade-in">
-            <h3 class="text-center">Hardware</h3>
-            <li class="font-weight-light">Integrate <code class="hardware">Raspberry PI</code> and/or
-              <code class="hardware">Arduino</code> in to embedded applications
-              such as <code class="hardware">IoT</code> devices.</li>
-            <li class="font-weight-light">Ability to diagnose problems using tools such as
-              <code class="hardware">multimeters</code> and
-              <code class="hardware">oscilloscopes</code>.</li>
-            <li class="font-weight-light">Experience with building various electronic circuits for projects.</li>
-            <li class="font-weight-light">Ability to read electronic schematics.</li>
-          </ul>
-        </div>
-      </div>
-
       </div>
 
     </div>

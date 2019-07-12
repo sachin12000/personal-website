@@ -34,6 +34,10 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.spacer-row {
+  background-color: transparent;
+}
+
 #btn-about-me {
   margin-top: 8px;
 }
