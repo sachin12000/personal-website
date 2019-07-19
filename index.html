@@ -45,7 +45,7 @@
             Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#contact_me">
             <img class="nav-pic" src="https://img.icons8.com/ios/50/000000/hammer.png">
             Contact Me</a>
         </li>
@@ -89,7 +89,9 @@
           Make sure to take a look at the skills section to get a full picture
           of my abilities.
         </p>
-        <button class="btn btn-dark btn-lg mb-3" type="button" id="btn-skills">My Skills</button>
+        <button id="btn-skills" class="btn btn-dark btn-lg mb-3" type="button">My Skills</button>
+        <p>or</p>
+        <button id="btn-contact-me" class="btn btn-dark btn-lg mb-3" type="button">Contact Me</button>
       </div>
     </div>
   </div>
@@ -170,13 +172,39 @@
     </div>
   </div>
 
-  <div id="contact_me" class="container-fluid content">
+
+  <div id="contact_me" class="container-fluid content" style="display: none">
     <div class="row spacer-row"></div>
     <div id="contact_me_row" class="row">
       <div id="contact_me_col" class="col my-auto bg-grey-transparent">
         <h1 class="display-4">Contact Me</h1>
-        <h4 class="font-weight-light">Software Engineering and Management<br>McMaster University</h4>
-        <button class="btn btn-dark btn-lg mb-3" type="button" id="btn-about-me">About Me</button>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6 col-lg-4">
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="Name" autofocus required>
+            </div>
+            <div class="form-group col-md-6 col-lg-4">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group col-md-12 col-lg-4">
+              <label>Subject</label>
+              <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              <label>Message</label>
+              <textarea class="form-control" rows="10" placeholder="Message" style="resize: none" required></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col">
+              <button class="btn btn-dark btn-lg mb-0" type="submit">Send Message!</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
