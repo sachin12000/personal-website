@@ -38,10 +38,6 @@ p {
   background-color: transparent;
 }
 
-#btn-about-me {
-  margin-top: 8px;
-}
-
 #loader-container {
   position: fixed;
   top: 0;
@@ -50,4 +46,13 @@ p {
   height: 100vh;
   background-color: rgba(0,0,0,1);
   pointer-events: none;
+}
+
+#btn-about-me {
+  margin-top: 8px;
+}
+
+#contact_me_col input, #contact_me_col textarea {
+  background-color: transparent;
+  color: white;
 }
