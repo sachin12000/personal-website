@@ -31,15 +31,10 @@ $(document).ready(function () {
   });
 
   $('#btn-contact-me').click(function() {
-    // $('#skills').fadeIn(1500);
-    // checkSize('#skills_col', '#skills_row');
-
-    $('#contact_me').fadeIn(1500);
+    $('#contact_me').height('auto');
+    $('#contact_me_row').animate({opacity: 1}, 1000);
     checkSize('#contact_me_col', '#contact_me_row');
-    console.log(document.body.scrollHeight);
-    document.getElementById('contact_me_col').scrollIntoView(true);
-    // window.scrollTo(0,document.body.scrollHeight);
-    // window.scrollTo(0,document.body.scrollHeight);
+    document.getElementById('contact_me').scrollIntoView(true);
   });
 
   $(window).resize(function() {checkSize('#home_col', '#home_row')});
