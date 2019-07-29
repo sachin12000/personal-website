@@ -107,19 +107,15 @@ $(document).ready(function () {
       if (data.code == 0) {
         displayModal('Success', 'Message sent successfully!', 'text-success');
         grecaptcha.reset();
-        captchaSucess = false;
       }
     }).fail(function (xhr, status, error) {
       if (xhr.status == 401) {
         displayModal('Error!', 'Please complete the captcha challenge', 'text-danger');
-        captchaSucess = false;
       } else if (xhr.status == 500) {
         displayModal('Error!', error, 'text-danger');
-        captchaSucess = false;
       } else {
         displayModal('Error!', 'Couldn\'t send the message', 'text-danger');
-        captchaSucess = false;
       }
-    });
+    }).finally(function () {captchaSucess = false;});
   });
 });
