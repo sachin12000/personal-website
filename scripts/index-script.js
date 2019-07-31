@@ -83,6 +83,10 @@ $(document).ready(function () {
     document.getElementById('contact_me').scrollIntoView(true);
   });
 
+  //fix for scrollspy making the wrong nav item (contact_me) active
+  $('#btn-contact-me').one('click', (e) => {
+    $('[href=\"#replace\"]').attr('href', '#contact_me')});
+
   $(window).resize(function() {checkSize('#home_col', '#home_row')});
   $(window).resize(function() {checkSize('#about_col', '#about_row')});
   $(window).resize(function() {checkSize('#skills_col', '#skills_row')});
