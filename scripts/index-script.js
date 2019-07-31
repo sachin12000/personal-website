@@ -52,6 +52,17 @@ function displayModal(title, message, colorClass) {
 }
 
 $(document).ready(function () {
+  var showAbout = function () {
+    $('body').css('overflow', 'auto');
+    $('#about').fadeIn(1500);
+    checkSize('#about_col', '#about_row');
+  }
+
+  var showSkills = function() {
+    $('body').css('overflow', 'auto');
+    $('#skills').fadeIn(1500);
+    checkSize('#skills_col', '#skills_row');
+  }
   //top part of the script is for sizing elements properly
   navHeight = $('#navbar').height() + 8;
   $('.spacer-row').height(navHeight);
@@ -60,32 +71,32 @@ $(document).ready(function () {
 
   $('#loader-container').fadeOut(1500);
 
-  $('#btn-about-me').click(function() {
-    $('body').css('overflow', 'auto');
-    $('#about').fadeIn(1500);
-    checkSize('#about_col', '#about_row');
+  $('#btn-about-me, [href=\"#about\"]').one('click', function() {
+    showAbout();
     document.getElementById('about').scrollIntoView(true);
   });
 
-  $('#btn-skills').click(function() {
-    $('#skills').fadeIn(1500);
-    checkSize('#skills_col', '#skills_row');
-    document.getElementById('skills').scrollIntoView(true);
+  $('#btn-skills, [href=\"#skills\"]').one('click', function() {
+    showAbout();
+    showSkills();
   });
 
-  $('#btn-contact-me').click(function() {
-    $('#skills').fadeIn(1000);
-    checkSize('#skills_col', '#skills_row');
+  $('#btn-contact-me, [href=\"#replace\"]').one('click', function() {
+    showAbout();
+    showSkills();
 
     $('#contact_me').height('auto');
     $('#contact_me_row').animate({opacity: 1}, 1500);
     checkSize('#contact_me_col', '#contact_me_row');
+    $('[href=\"#replace\"]').attr('href', '#contact_me');
     document.getElementById('contact_me').scrollIntoView(true);
   });
 
-  //fix for scrollspy making the wrong nav item (contact_me) active
-  $('#btn-contact-me').one('click', (e) => {
-    $('[href=\"#replace\"]').attr('href', '#contact_me')});
+  $('#btn-about-me').click(() => {document.getElementById('about').scrollIntoView(true);});
+
+  $('#btn-skills').click(() => {document.getElementById('skills').scrollIntoView(true);});
+
+  $('#btn-contact-me').click(() =>{document.getElementById('contact_me').scrollIntoView(true);});
 
   $(window).resize(function() {checkSize('#home_col', '#home_row')});
   $(window).resize(function() {checkSize('#about_col', '#about_row')});
