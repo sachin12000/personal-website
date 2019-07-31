@@ -129,13 +129,11 @@ $(document).ready(function () {
         displayModal('Error! Message not sent', 'Please complete the captcha challenge',
         'text-danger');
         grecaptcha.reset();
-      } else if (xhr.status == 500) {
-        displayModal('Error! Message not sent', error, 'text-danger');
       } else if(xhr.status == 400) {
         displayModal('Error! Message not sent', 'Invalid request', 'text-danger');
       }
       else {
-        displayModal('Error! Message not sent', 'Unknown error', 'text-danger');
+        displayModal('Error! Message not sent', error, 'text-danger');
       }
     });
     captchaSucess = false;
