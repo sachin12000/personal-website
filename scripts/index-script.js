@@ -113,6 +113,7 @@ $(document).ready(function () {
       if (xhr.status == 401) {
         displayModal('Error! Message not sent', 'Please complete the captcha challenge',
         'text-danger');
+        grecaptcha.reset();
       } else if (xhr.status == 500) {
         displayModal('Error! Message not sent', error, 'text-danger');
       } else if(xhr.status == 400) {
