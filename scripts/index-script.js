@@ -9,28 +9,6 @@ function checkSize(col_id, target_id) {
   }
 }
 
-//captcha handling code
-var captchaSucess = false;
-function captchaSuccess(token) {
-  captchaSucess = true;
-}
-
-function captchaExpired() {
-  captchaSucess = false;
-}
-
-function captchaError() {
-  captchaSucess = false;
-}
-
-function validateText(text) {
-  if ((text === undefined) || (text === null) || (text === '')) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
 var lastClass = '';
 //displays a modal with the specified title, message and the text color
 function displayModal(title, message, colorClass) {
@@ -104,38 +82,30 @@ $(document).ready(function () {
   $(window).resize(function() {checkSize('#contact_me_col', '#contact_me_row')});
 
   //code below handles the validation (including captcha) for the contact me form
+  const config = {
+  apiKey: "AIzaSyDA56KXcwKsZDYt75bqT2ILjnSI0F37PoU",
+  authDomain: "forgingahead-17f20.firebaseapp.com",
+  databaseURL: "https://forgingahead-17f20.firebaseio.com",
+  projectId: "forgingahead-17f20",
+  storageBucket: "",
+  messagingSenderId: "1006422903305",
+  appId: "1:1006422903305:web:223093ae9e1a13cc"};
+  firebase.initializeApp(config);
+  const db = firebase.database().ref();
+
   $("#contactMeForm").submit(function(e) {
     e.preventDefault();
-    var t = grecaptcha.getResponse();
-    if (!captchaSucess || !validateText(t)) {
-      displayModal('Error! Message not sent', 'Please complete the captcha challenge',
-      'text-danger');
-      return;
-    }
-    $.post('post',
-    {
+    db.push({
       name: $('#name').val(),
       email: $('#email').val(),
       subject: $('#subject').val(),
-      message: $('#message').val(),
-      token: t
-    }).done(function(data,status) {
-      if (data.code == 0) {
+      message: $('#message').val()
+    }, (e) => {
+      if (e === null) {
         displayModal('Success', 'Message sent successfully!', 'text-success');
-        grecaptcha.reset();
-      }
-    }).fail(function (xhr, status, error) {
-      if (xhr.status == 401) {
-        displayModal('Error! Message not sent', 'Please complete the captcha challenge',
-        'text-danger');
-        grecaptcha.reset();
-      } else if(xhr.status == 400) {
-        displayModal('Error! Message not sent', 'Invalid request', 'text-danger');
-      }
-      else {
-        displayModal('Error! Message not sent', error, 'text-danger');
+      } else {
+        displayModal('Error! Message not sent', 'Error message: ' + String(e), 'text-danger');
       }
     });
-    captchaSucess = false;
   });
 });
